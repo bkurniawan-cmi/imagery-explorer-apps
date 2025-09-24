@@ -36,6 +36,8 @@ import { Sentinel2ChangeLayer } from '../ChangeCompareLayer';
 import { APP_NAME } from '@shared/config';
 import { useTranslation } from 'react-i18next';
 import { FootPrintOfSelectedScene } from '@shared/components/FootPrintOfSelectedScene';
+import LayerJson from '@shared/components/FeatureLayer/LayerJson';
+import FLToggle from '@shared/components/FeatureLayer/FLToggle';
 
 const Map = () => {
     const dispatch = useAppDispatch();
@@ -84,6 +86,9 @@ const Map = () => {
                     ns: APP_NAME,
                 })}
             />
+
+            <LayerJson />
+            <FLToggle />
         </MapViewContainer>
     );
 };
